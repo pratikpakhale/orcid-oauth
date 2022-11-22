@@ -30,6 +30,7 @@ app.get('/token/:code', async (req, res) => {
   try {
     const data = await axios(conf)
     orcid = data.data.orcid
+    console.log(data.data)
   } catch (err) {
     console.log(err.message)
   }
